@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B1495FCD15C1CBEB00A63CD5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1495FCC15C1CBEB00A63CD5 /* UIKit.framework */; };
+		B1495FCF15C1CBEB00A63CD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1495FCE15C1CBEB00A63CD5 /* Foundation.framework */; };
+		B1495FD115C1CBEB00A63CD5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1495FD015C1CBEB00A63CD5 /* CoreGraphics.framework */; };
+		B1495FD315C1CBEB00A63CD5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1495FD215C1CBEB00A63CD5 /* CoreData.framework */; };
+		B1495FD915C1CBEB00A63CD5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1495FD715C1CBEB00A63CD5 /* InfoPlist.strings */; };
+		B1495FDB15C1CBEB00A63CD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1495FDA15C1CBEB00A63CD5 /* main.m */; };
+		B1495FDF15C1CBEB00A63CD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1495FDE15C1CBEB00A63CD5 /* AppDelegate.m */; };
+		B1495FE215C1CBEB00A63CD5 /* Lyrics.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B1495FE015C1CBEB00A63CD5 /* Lyrics.xcdatamodeld */; };
+		B1495FF515C1CE5700A63CD5 /* LyricsApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = B1495FF415C1CE5600A63CD5 /* LyricsApplication.m */; };
+		B1495FF815C1CF0000A63CD5 /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B1495FF715C1CF0000A63CD5 /* SettingsManager.m */; };
+		B1495FFB15C1CFEA00A63CD5 /* StorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B1495FFA15C1CFEA00A63CD5 /* StorageManager.m */; };
+		B149600415C1D0B600A63CD5 /* CustomDataLyrics.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B149600215C1D0B600A63CD5 /* CustomDataLyrics.xcdatamodeld */; };
+		B149600715C1D0F800A63CD5 /* Favorites.m in Sources */ = {isa = PBXBuildFile; fileRef = B149600615C1D0F800A63CD5 /* Favorites.m */; };
+		B149601115C1D33000A63CD5 /* +NSDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = B149600915C1D33000A63CD5 /* +NSDictionary.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B149601215C1D33000A63CD5 /* +NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = B149600B15C1D33000A63CD5 /* +NSString.m */; };
+		B149601315C1D33000A63CD5 /* +UIDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = B149600D15C1D33000A63CD5 /* +UIDevice.m */; };
+		B149601415C1D33000A63CD5 /* +UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = B149600F15C1D33000A63CD5 /* +UIView.m */; };
+		B149601715C1D39600A63CD5 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = B149601615C1D39600A63CD5 /* Song.m */; };
+		B149601A15C1D39600A63CD5 /* Band.m in Sources */ = {isa = PBXBuildFile; fileRef = B149601915C1D39600A63CD5 /* Band.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B1495FC815C1CBEB00A63CD5 /* Lyrics-Speed-Thrash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lyrics-Speed-Thrash.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1495FCC15C1CBEB00A63CD5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B1495FCE15C1CBEB00A63CD5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B1495FD015C1CBEB00A63CD5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B1495FD215C1CBEB00A63CD5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B1495FD615C1CBEB00A63CD5 /* Lyrics-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lyrics-Info.plist"; sourceTree = "<group>"; };
+		B1495FD815C1CBEB00A63CD5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B1495FDA15C1CBEB00A63CD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B1495FDC15C1CBEB00A63CD5 /* Lyrics-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lyrics-Prefix.pch"; sourceTree = "<group>"; };
+		B1495FDD15C1CBEB00A63CD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B1495FDE15C1CBEB00A63CD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B1495FE115C1CBEB00A63CD5 /* Lyrics.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Lyrics.xcdatamodel; sourceTree = "<group>"; };
+		B1495FF315C1CE5600A63CD5 /* LyricsApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LyricsApplication.h; path = Resources/LyricsApplication.h; sourceTree = "<group>"; };
+		B1495FF415C1CE5600A63CD5 /* LyricsApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LyricsApplication.m; path = Resources/LyricsApplication.m; sourceTree = "<group>"; };
+		B1495FF615C1CF0000A63CD5 /* SettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsManager.h; path = Managers/SettingsManager.h; sourceTree = "<group>"; };
+		B1495FF715C1CF0000A63CD5 /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsManager.m; path = Managers/SettingsManager.m; sourceTree = "<group>"; };
+		B1495FF915C1CFEA00A63CD5 /* StorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StorageManager.h; path = Managers/StorageManager.h; sourceTree = "<group>"; };
+		B1495FFA15C1CFEA00A63CD5 /* StorageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StorageManager.m; path = Managers/StorageManager.m; sourceTree = "<group>"; };
+		B149600315C1D0B600A63CD5 /* CustomDataLyrics.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CustomDataLyrics.xcdatamodel; sourceTree = "<group>"; };
+		B149600515C1D0F800A63CD5 /* Favorites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Favorites.h; path = Model/Favorites.h; sourceTree = "<group>"; };
+		B149600615C1D0F800A63CD5 /* Favorites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Favorites.m; path = Model/Favorites.m; sourceTree = "<group>"; };
+		B149600815C1D33000A63CD5 /* +NSDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "+NSDictionary.h"; path = "Utils/+NSDictionary.h"; sourceTree = "<group>"; };
+		B149600915C1D33000A63CD5 /* +NSDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "+NSDictionary.m"; path = "Utils/+NSDictionary.m"; sourceTree = "<group>"; };
+		B149600A15C1D33000A63CD5 /* +NSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "+NSString.h"; path = "Utils/+NSString.h"; sourceTree = "<group>"; };
+		B149600B15C1D33000A63CD5 /* +NSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "+NSString.m"; path = "Utils/+NSString.m"; sourceTree = "<group>"; };
+		B149600C15C1D33000A63CD5 /* +UIDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "+UIDevice.h"; path = "Utils/+UIDevice.h"; sourceTree = "<group>"; };
+		B149600D15C1D33000A63CD5 /* +UIDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "+UIDevice.m"; path = "Utils/+UIDevice.m"; sourceTree = "<group>"; };
+		B149600E15C1D33000A63CD5 /* +UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "+UIView.h"; path = "Utils/+UIView.h"; sourceTree = "<group>"; };
+		B149600F15C1D33000A63CD5 /* +UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "+UIView.m"; path = "Utils/+UIView.m"; sourceTree = "<group>"; };
+		B149601015C1D33000A63CD5 /* Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Additions.h; path = Utils/Additions.h; sourceTree = "<group>"; };
+		B149601515C1D39600A63CD5 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Song.h; path = Model/Song.h; sourceTree = "<group>"; };
+		B149601615C1D39600A63CD5 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Song.m; path = Model/Song.m; sourceTree = "<group>"; };
+		B149601815C1D39600A63CD5 /* Band.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Band.h; path = Model/Band.h; sourceTree = "<group>"; };
+		B149601915C1D39600A63CD5 /* Band.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Band.m; path = Model/Band.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B1495FC515C1CBEA00A63CD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1495FCD15C1CBEB00A63CD5 /* UIKit.framework in Frameworks */,
+				B1495FCF15C1CBEB00A63CD5 /* Foundation.framework in Frameworks */,
+				B1495FD115C1CBEB00A63CD5 /* CoreGraphics.framework in Frameworks */,
+				B1495FD315C1CBEB00A63CD5 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B1495FBD15C1CBEA00A63CD5 = {
+			isa = PBXGroup;
+			children = (
+				B1495FD415C1CBEB00A63CD5 /* Lyrics */,
+				B1495FCB15C1CBEB00A63CD5 /* Frameworks */,
+				B1495FC915C1CBEB00A63CD5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B1495FC915C1CBEB00A63CD5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B1495FC815C1CBEB00A63CD5 /* Lyrics-Speed-Thrash.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B1495FCB15C1CBEB00A63CD5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1495FCC15C1CBEB00A63CD5 /* UIKit.framework */,
+				B1495FCE15C1CBEB00A63CD5 /* Foundation.framework */,
+				B1495FD015C1CBEB00A63CD5 /* CoreGraphics.framework */,
+				B1495FD215C1CBEB00A63CD5 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1495FD415C1CBEB00A63CD5 /* Lyrics */ = {
+			isa = PBXGroup;
+			children = (
+				B1495FED15C1CD7800A63CD5 /* Managers */,
+				B1495FF215C1CD9F00A63CD5 /* Model */,
+				B1495FF115C1CD9600A63CD5 /* iPhone */,
+				B1495FF015C1CD8A00A63CD5 /* iPad */,
+				B1495FEF15C1CD8300A63CD5 /* Resources */,
+				B1495FD515C1CBEB00A63CD5 /* Supporting Files */,
+				B1495FEE15C1CD7E00A63CD5 /* Utils */,
+				B1495FDD15C1CBEB00A63CD5 /* AppDelegate.h */,
+				B1495FDE15C1CBEB00A63CD5 /* AppDelegate.m */,
+				B1495FF315C1CE5600A63CD5 /* LyricsApplication.h */,
+				B1495FF415C1CE5600A63CD5 /* LyricsApplication.m */,
+			);
+			path = Lyrics;
+			sourceTree = "<group>";
+		};
+		B1495FD515C1CBEB00A63CD5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1495FD615C1CBEB00A63CD5 /* Lyrics-Info.plist */,
+				B1495FD715C1CBEB00A63CD5 /* InfoPlist.strings */,
+				B1495FDA15C1CBEB00A63CD5 /* main.m */,
+				B1495FDC15C1CBEB00A63CD5 /* Lyrics-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B1495FED15C1CD7800A63CD5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B1495FF615C1CF0000A63CD5 /* SettingsManager.h */,
+				B1495FF715C1CF0000A63CD5 /* SettingsManager.m */,
+				B1495FF915C1CFEA00A63CD5 /* StorageManager.h */,
+				B1495FFA15C1CFEA00A63CD5 /* StorageManager.m */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		B1495FEE15C1CD7E00A63CD5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B149600815C1D33000A63CD5 /* +NSDictionary.h */,
+				B149600915C1D33000A63CD5 /* +NSDictionary.m */,
+				B149600A15C1D33000A63CD5 /* +NSString.h */,
+				B149600B15C1D33000A63CD5 /* +NSString.m */,
+				B149600C15C1D33000A63CD5 /* +UIDevice.h */,
+				B149600D15C1D33000A63CD5 /* +UIDevice.m */,
+				B149600E15C1D33000A63CD5 /* +UIView.h */,
+				B149600F15C1D33000A63CD5 /* +UIView.m */,
+				B149601015C1D33000A63CD5 /* Additions.h */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		B1495FEF15C1CD8300A63CD5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B1495FF015C1CD8A00A63CD5 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		B1495FF115C1CD9600A63CD5 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		B1495FF215C1CD9F00A63CD5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B149600215C1D0B600A63CD5 /* CustomDataLyrics.xcdatamodeld */,
+				B1495FE015C1CBEB00A63CD5 /* Lyrics.xcdatamodeld */,
+				B149601815C1D39600A63CD5 /* Band.h */,
+				B149601915C1D39600A63CD5 /* Band.m */,
+				B149601515C1D39600A63CD5 /* Song.h */,
+				B149601615C1D39600A63CD5 /* Song.m */,
+				B149600515C1D0F800A63CD5 /* Favorites.h */,
+				B149600615C1D0F800A63CD5 /* Favorites.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B1495FC715C1CBEA00A63CD5 /* Lyrics-Speed-Thrash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1495FE515C1CBEB00A63CD5 /* Build configuration list for PBXNativeTarget "Lyrics-Speed-Thrash" */;
+			buildPhases = (
+				B1495FC415C1CBEA00A63CD5 /* Sources */,
+				B1495FC515C1CBEA00A63CD5 /* Frameworks */,
+				B1495FC615C1CBEA00A63CD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lyrics-Speed-Thrash";
+			productName = Lyrics;
+			productReference = B1495FC815C1CBEB00A63CD5 /* Lyrics-Speed-Thrash.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B1495FBF15C1CBEA00A63CD5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Daniel Cristolovean";
+			};
+			buildConfigurationList = B1495FC215C1CBEA00A63CD5 /* Build configuration list for PBXProject "Lyrics" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B1495FBD15C1CBEA00A63CD5;
+			productRefGroup = B1495FC915C1CBEB00A63CD5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B1495FC715C1CBEA00A63CD5 /* Lyrics-Speed-Thrash */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B1495FC615C1CBEA00A63CD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1495FD915C1CBEB00A63CD5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B1495FC415C1CBEA00A63CD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1495FDB15C1CBEB00A63CD5 /* main.m in Sources */,
+				B1495FDF15C1CBEB00A63CD5 /* AppDelegate.m in Sources */,
+				B1495FE215C1CBEB00A63CD5 /* Lyrics.xcdatamodeld in Sources */,
+				B1495FF515C1CE5700A63CD5 /* LyricsApplication.m in Sources */,
+				B1495FF815C1CF0000A63CD5 /* SettingsManager.m in Sources */,
+				B1495FFB15C1CFEA00A63CD5 /* StorageManager.m in Sources */,
+				B149600415C1D0B600A63CD5 /* CustomDataLyrics.xcdatamodeld in Sources */,
+				B149600715C1D0F800A63CD5 /* Favorites.m in Sources */,
+				B149601115C1D33000A63CD5 /* +NSDictionary.m in Sources */,
+				B149601215C1D33000A63CD5 /* +NSString.m in Sources */,
+				B149601315C1D33000A63CD5 /* +UIDevice.m in Sources */,
+				B149601415C1D33000A63CD5 /* +UIView.m in Sources */,
+				B149601715C1D39600A63CD5 /* Song.m in Sources */,
+				B149601A15C1D39600A63CD5 /* Band.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B1495FD715C1CBEB00A63CD5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1495FD815C1CBEB00A63CD5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B1495FE315C1CBEB00A63CD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B1495FE415C1CBEB00A63CD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B1495FE615C1CBEB00A63CD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lyrics/Lyrics-Prefix.pch";
+				INFOPLIST_FILE = "Lyrics/Lyrics-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B1495FE715C1CBEB00A63CD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lyrics/Lyrics-Prefix.pch";
+				INFOPLIST_FILE = "Lyrics/Lyrics-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B1495FC215C1CBEA00A63CD5 /* Build configuration list for PBXProject "Lyrics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1495FE315C1CBEB00A63CD5 /* Debug */,
+				B1495FE415C1CBEB00A63CD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1495FE515C1CBEB00A63CD5 /* Build configuration list for PBXNativeTarget "Lyrics-Speed-Thrash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1495FE615C1CBEB00A63CD5 /* Debug */,
+				B1495FE715C1CBEB00A63CD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B1495FE015C1CBEB00A63CD5 /* Lyrics.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B1495FE115C1CBEB00A63CD5 /* Lyrics.xcdatamodel */,
+			);
+			currentVersion = B1495FE115C1CBEB00A63CD5 /* Lyrics.xcdatamodel */;
+			path = Lyrics.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		B149600215C1D0B600A63CD5 /* CustomDataLyrics.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B149600315C1D0B600A63CD5 /* CustomDataLyrics.xcdatamodel */,
+			);
+			currentVersion = B149600315C1D0B600A63CD5 /* CustomDataLyrics.xcdatamodel */;
+			name = CustomDataLyrics.xcdatamodeld;
+			path = Model/CustomDataLyrics.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B1495FBF15C1CBEA00A63CD5 /* Project object */;
+}
