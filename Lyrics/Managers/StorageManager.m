@@ -33,6 +33,9 @@ static StorageManager *current = nil;
 
 #pragma mark - Temp data creation
 
+- (void)getStuff {
+}
+
 #pragma mark - Save context
 
 - (void)saveData {
@@ -68,7 +71,7 @@ static StorageManager *current = nil;
         NSMutableArray *authors = [[NSMutableArray alloc] init];
         NSMutableArray *poems = [[NSMutableArray alloc] init];
         for (Favorites *f in favorites) {
-            if ([NSString isEmpty:f.songName])
+            if ([NSString isEmpty:f.songName] || [f.songName isEqualToString:@" "])
                 [onlyAuthors addObject:f.bandName];
             [authors addObject:f.bandName];
             [poems addObject:f.songName];
@@ -76,7 +79,7 @@ static StorageManager *current = nil;
         
         if (onlyAuthors.count > 0) {
             fetchRequest = [[NSFetchRequest alloc] init];
-            NSEntityDescription *entity = [NSEntityDescription entityForName:@"Writer" inManagedObjectContext:self.managedObjectContext];
+            NSEntityDescription *entity = [NSEntityDescription entityForName:@"Band" inManagedObjectContext:self.managedObjectContext];
             [fetchRequest setEntity:entity];
             [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"name IN %@", onlyAuthors]];
             [items addObjectsFromArray:[self.managedObjectContext executeFetchRequest:fetchRequest error:&error]];
@@ -84,7 +87,7 @@ static StorageManager *current = nil;
         
         if (authors.count > 0) {
             fetchRequest = [[NSFetchRequest alloc] init];
-            NSEntityDescription *entity2 = [NSEntityDescription entityForName:@"Poetry" inManagedObjectContext:self.managedObjectContext];
+            NSEntityDescription *entity2 = [NSEntityDescription entityForName:@"Song" inManagedObjectContext:self.managedObjectContext];
             [fetchRequest setEntity:entity2];
             [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"title IN %@", poems]];
             NSMutableArray *temp = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:fetchRequest error:&error]];
@@ -102,34 +105,9 @@ static StorageManager *current = nil;
     }
     
     return items;
-    
-    /*
-     NSError *error;
-     NSMutableArray *items;
-     NSMutableArray *items2;
-     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-     
-     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Writer" inManagedObjectContext:self.managedObjectContext];
-     [fetchRequest setEntity:entity];
-     
-     [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"isFavorite = 1"]];
-     
-     items = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:fetchRequest error:&error]];
-     
-     fetchRequest = [[NSFetchRequest alloc] init];
-     NSEntityDescription *entity2 = [NSEntityDescription entityForName:@"Poetry" inManagedObjectContext:self.managedObjectContext];
-     [fetchRequest setEntity:entity2];
-     
-     [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"isFavorite = 1"]];
-     
-     items2 = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:fetchRequest error:&error]];
-     
-     return [NSMutableArray arrayWithArray:[items arrayByAddingObjectsFromArray:items2]];
-     
-     */
 }
 
-- (BOOL)favoriteExists:(NSString *)bandName andPoem:(NSString *)songName {
+- (BOOL)favoriteExists:(NSString *)bandName andSong:(NSString *)songName {
     NSError *error;
     NSMutableArray *items;
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -139,7 +117,7 @@ static StorageManager *current = nil;
     
     [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"bandName == %@ AND songName == %@", bandName, songName]];
     
-    items = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:fetchRequest error:&error]];
+    items = [NSMutableArray arrayWithArray:[self.managedObjectContextCustom executeFetchRequest:fetchRequest error:&error]];
     
     if (items && items.count > 0)
         return YES;
@@ -150,7 +128,7 @@ static StorageManager *current = nil;
 
 - (void)addFavoriteFor:(NSString *)bandName andSong:(NSString *)songName {
     
-    if (![self favoriteExists:bandName andPoem:songName]) {
+    if (![self favoriteExists:bandName andSong:songName]) {
         Favorites *fav = [NSEntityDescription insertNewObjectForEntityForName:@"Favorites" inManagedObjectContext:self.managedObjectContextCustom];
         fav.bandName = bandName;
         fav.songName = songName;
@@ -251,6 +229,9 @@ static StorageManager *current = nil;
     
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Band" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:descriptor]];
        
     items = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:fetchRequest error:&error]];
     
@@ -296,7 +277,7 @@ static StorageManager *current = nil;
     if (__managedObjectModel != nil) {
         return __managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"rPoezie" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Lyrics" withExtension:@"momd"];
     __managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return __managedObjectModel;
 }
@@ -307,22 +288,8 @@ static StorageManager *current = nil;
     }
     
     NSString *storePath = @"";
-    
-#ifdef RO
-    storePath = [[self stringApplicationDocumentsDirectory] stringByAppendingPathComponent:@"rPoezie.sqlite"];
-#endif
-    
-#ifdef EN
-    storePath = [[self stringApplicationDocumentsDirectory] stringByAppendingPathComponent:@"ePoezie.sqlite"];
-#endif
-    
-#ifdef FR
-    storePath = [[self stringApplicationDocumentsDirectory] stringByAppendingPathComponent:@"fPoezie.sqlite"];
-#endif
-    
-#ifdef DE
-    storePath = [[self stringApplicationDocumentsDirectory] stringByAppendingPathComponent:@"dPoezie.sqlite"];
-#endif
+   
+    storePath = [[self stringApplicationDocumentsDirectory] stringByAppendingPathComponent:@"Lyrics_Speed_Thrash.sqlite"];
     
     NSString *installedVersion = [[SettingsManager current] getVersion];
     NSString *currentVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
@@ -342,22 +309,8 @@ static StorageManager *current = nil;
     if (![fileManager fileExistsAtPath:storePath]) {
         NSString *defaultStorePath = @"";
         
-#ifdef RO
-        defaultStorePath = [[NSBundle mainBundle] pathForResource:@"rPoezie" ofType:@"sqlite"];
-#endif
-        
-#ifdef EN
-        defaultStorePath = [[NSBundle mainBundle] pathForResource:@"ePoezie" ofType:@"sqlite"];
-#endif
-        
-#ifdef FR
-        defaultStorePath = [[NSBundle mainBundle] pathForResource:@"fPoezie" ofType:@"sqlite"];
-#endif
-        
-#ifdef DE
-        defaultStorePath = [[NSBundle mainBundle] pathForResource:@"dPoezie" ofType:@"sqlite"];
-#endif
-        
+        defaultStorePath = [[NSBundle mainBundle] pathForResource:@"Lyrics_Speed_Thrash" ofType:@"sqlite"];
+               
         if (defaultStorePath)
             [fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
     }
@@ -403,7 +356,7 @@ static StorageManager *current = nil;
     if (__managedObjectModelCustom != nil) {
         return __managedObjectModelCustom;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"CustomDataRPoezie" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"CustomDataLyrics" withExtension:@"momd"];
     __managedObjectModelCustom = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return __managedObjectModelCustom;
 }
@@ -413,12 +366,12 @@ static StorageManager *current = nil;
         return __persistentStoreCoordinatorCustom;
     }
     
-    NSString *storePath = [[self stringApplicationDocumentsDirectory] stringByAppendingPathComponent:@"CustomRPoezie.sqlite"];
+    NSString *storePath = [[self stringApplicationDocumentsDirectory] stringByAppendingPathComponent:@"CustomDataLyrics"];
     NSURL *storeURL = [NSURL fileURLWithPath:storePath];
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if (![fileManager fileExistsAtPath:storePath]) {
-        NSString *defaultStorePath  = [[NSBundle mainBundle] pathForResource:@"CustomRPoezie" ofType:@"sqlite"];
+        NSString *defaultStorePath  = [[NSBundle mainBundle] pathForResource:@"CustomDataLyrics" ofType:@"sqlite"];
         if (defaultStorePath)
             [fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
     }

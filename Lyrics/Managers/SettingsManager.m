@@ -93,12 +93,7 @@ static SettingsManager *current = nil;
 #pragma mark - Sharing
 
 - (NSString *)getFacebookURL {
-    
-#ifdef RO
-    return @"http://www.facebook.com/poezii.romanesti";
-#endif
-      
-    return @"";
+    return @"http://www.facebook.com/lyrics.stm";
 }
 
 - (NSString *)getFacebookImageURL {
@@ -111,60 +106,11 @@ static SettingsManager *current = nil;
 }
 
 - (NSString *)getFacebookName {
-    
-#ifdef RO
-    return @"Poezii românești";
-#endif
-    
-    return @"";
+    return @"Lyrics - Speed & Thrash Metal";
 }
 
-- (NSString *)getTwitterTitle {
-    
-#ifdef RO
-    return @"From Poezii romanesti:";
-#endif
-       
-    return @"";
-}
-
-- (NSString *)getAuthorsTitle {
-    
-#ifdef RO
-    return @"Autori";
-#endif
-    
-    return @"";
-}
-
-- (NSString *)getInformationsTitle {
-    
-#ifdef RO
-    return @"Informații";
-#endif
-      
-    return @"";
-}
-
-- (NSString *)getFavoritesTitle {
-    
-#ifdef RO
-    return @"Preferate";
-#endif
-    
-    return @"";
-}
-
-- (NSString *)getCommentsTitle {
-#ifdef RO
-    return @"Comentarii";
-#endif
-    
-#ifdef EN
-    return @"Comments";
-#endif
-        
-    return @"";
+- (NSString *)getTwitterTitle {   
+    return @"From Lyrics - Speed & Thrash Metal:";
 }
 
 #pragma mark - Singleton

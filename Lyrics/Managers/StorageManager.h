@@ -24,13 +24,14 @@
 - (void)saveData;
 - (void)saveDataCustom;
 
-//- (void)getStuff;
+- (void)getStuff;
 - (NSMutableArray *)getBands;
 - (NSMutableArray *)getFavorites;
 - (NSMutableArray *)getSearchData:(NSString *)filter;
 
 - (void)addFavoriteFor:(NSString *)bandName andSong:(NSString *)songName;
 - (void)removeFavorite:(NSString *)bandName andSong:(NSString *)songName;
+- (BOOL)favoriteExists:(NSString *)bandName andSong:(NSString *)songName;
 
 - (Band *)getBandForSong:(Song *)song;
 - (int)getPositionForSong:(Song *)song;

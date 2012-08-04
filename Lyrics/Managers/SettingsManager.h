@@ -9,13 +9,15 @@
 #import <Foundation/Foundation.h>
 
 //#ifdef RO
-//#define kOAuthConsumerKey @"ELQfngrNIj0a06JepctsIQ"
-//#define kOAuthConsumerSecret @"fHA25Oidkb5PwZ7FpKJrtcCnilrVqaxkolgc7d1nEg"
+#define kOAuthConsumerKey @"O22hWB5dNKo5DI9VbPsIgg"
+#define kOAuthConsumerSecret @"RMynSqY3OFN1fsuaEf6AM977jJJNQ6HSE77A8Z4kk"
 //#endif
 
 //#ifdef RO
-//#define facebookAPI	@"150201851764819"
+#define facebookAPI	@"262206833890576"
 //#endif
+
+#define AdWhirlAPI @"05c424ba45264acfb6625e9d982d4973"
 
 @interface SettingsManager : NSObject {
     NSMutableDictionary* settings;
@@ -40,10 +42,6 @@
 - (NSString *)getFacebookImageURL;
 - (NSString *)getFacebookName;
 - (NSString *)getTwitterTitle;
-- (NSString *)getAuthorsTitle;
-- (NSString *)getInformationsTitle;
-- (NSString *)getFavoritesTitle;
-- (NSString *)getCommentsTitle;
 
 - (void)setTextFontSize:(int)size;
 - (int)getTextFontSize;

@@ -6,5 +6,6 @@
 #import "+NSString.h"
 #import "+UIDevice.h"
 #import "+UIView.h"
+#import "+UIImage.h"
 
 
