@@ -96,7 +96,7 @@
 							<object class="IBUIBarButtonItem" id="391018053">
 								<object class="NSCustomResource" key="IBUIImage">
 									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">info.png</string>
+									<string key="NSResourceName">settings.png</string>
 								</object>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<reference key="IBUIToolbar" ref="382354902"/>
@@ -135,7 +135,6 @@
 						<array class="NSMutableArray" key="NSSubviews"/>
 						<string key="NSFrame">{{0, 366}, {320, 50}}</string>
 						<reference key="NSSuperview" ref="930441307"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<object class="NSColor" key="IBUIBackgroundColor" id="782129015">
 							<int key="NSColorSpace">3</int>
@@ -350,7 +349,7 @@
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="favorites.png">{20, 20}</string>
 			<string key="gray-to-black-gradient-ipad-wallpaper.jpg">{1024, 1024}</string>
-			<string key="info.png">{20, 20}</string>
+			<string key="settings.png">{20, 20}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">1498</string>
 	</data>

@@ -19,7 +19,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     
     [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
     NSDictionary *textAttr = [NSDictionary dictionaryWithObjectsAndKeys:RRFONTFUTURAMEDIUM18, UITextAttributeFont, [UIColor whiteColor], UITextAttributeTextColor, nil];

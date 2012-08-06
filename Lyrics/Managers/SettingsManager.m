@@ -93,24 +93,56 @@ static SettingsManager *current = nil;
 #pragma mark - Sharing
 
 - (NSString *)getFacebookURL {
+    
+#ifdef LST
     return @"http://www.facebook.com/lyrics.stm";
+#endif
+    
+#ifdef LRH
+    return @"http://www.facebook.com/lyrics.rhr";
+#endif
+    
+    return @"";
 }
 
 - (NSString *)getFacebookImageURL {
     
-#ifdef RO
+#ifdef LST
     return @"http://rockabilly.ro/img/poezii-romanesti/launch-icon-114.png";
 #endif
-      
+
+#ifdef LRH
+    return @"http://rockabilly.ro/img/poezii-romanesti/launch-icon-114.png";
+#endif
+    
     return @"";
 }
 
 - (NSString *)getFacebookName {
+    
+#ifdef LST
     return @"Lyrics - Speed & Thrash Metal";
+#endif
+    
+#ifdef LRH
+    return @"Lyrics - Rock & Hard Rock";
+#endif
+    
+    return @"";
 }
 
-- (NSString *)getTwitterTitle {   
+- (NSString *)getTwitterTitle {
+    
+#ifdef LST
     return @"From Lyrics - Speed & Thrash Metal:";
+#endif
+    
+#ifdef LRH
+    return @"From Lyrics - Rock & Hard Rock";
+#endif
+    
+    return @"";
+    
 }
 
 #pragma mark - Singleton
@@ -122,4 +154,5 @@ static SettingsManager *current = nil;
 	}
 	return current;
 }
+
 @end

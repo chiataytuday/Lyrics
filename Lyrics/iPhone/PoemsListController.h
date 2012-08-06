@@ -27,5 +27,6 @@
 - (IBAction)search:(id)sender;
 - (IBAction)favorites:(id)sender;
 - (IBAction)info:(id)sender;
+- (IBAction)infoBand:(id)sender;
 
 @end

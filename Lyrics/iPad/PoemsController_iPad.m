@@ -35,7 +35,7 @@
         [segmentedControl setMomentary:YES];
         [segmentedControl insertSegmentWithImage:[UIImage imageNamed:@"search.png"] atIndex:0 animated:NO];
         [segmentedControl insertSegmentWithImage:[UIImage imageNamed:@"favorites.png"] atIndex:1 animated:NO];
-        [segmentedControl insertSegmentWithImage:[UIImage imageNamed:@"info.png"] atIndex:2 animated:NO];
+        [segmentedControl insertSegmentWithImage:[UIImage imageNamed:@"settings.png"] atIndex:2 animated:NO];
         [segmentedControl insertSegmentWithTitle:@"Share" atIndex:3 animated:NO];
         [segmentedControl insertSegmentWithImage:[UIImage imageNamed:@"youtube.png"] atIndex:4 animated:NO];
         segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;

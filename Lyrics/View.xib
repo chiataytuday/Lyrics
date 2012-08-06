@@ -41,6 +41,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrameSize">{1024, 1024}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSNextKeyView" ref="596665911"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -52,7 +53,7 @@
 					<object class="IBUILabel" id="596665911">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{119, 95}, {768, 243}}</string>
+						<string key="NSFrame">{{119, 95}, {768, 291}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSNextKeyView" ref="439925752"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -61,7 +62,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Speed</string>
+						<string key="IBUIText">Rock</string>
 						<object class="NSColor" key="IBUITextColor" id="96748749">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
@@ -70,15 +71,15 @@
 						<int key="IBUIBaselineAdjustment">0</int>
 						<float key="IBUIMinimumFontSize">10</float>
 						<int key="IBUITextAlignment">1</int>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="61766758">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="46541875">
 							<string key="name">AmericanTypewriter-Condensed</string>
 							<string key="family">American Typewriter</string>
 							<int key="traits">0</int>
-							<double key="pointSize">235</double>
+							<double key="pointSize">280</double>
 						</object>
-						<object class="NSFont" key="IBUIFont" id="209288206">
+						<object class="NSFont" key="IBUIFont" id="777752899">
 							<string key="NSName">AmericanTypewriter-CondensedLight</string>
-							<double key="NSSize">235</double>
+							<double key="NSSize">280</double>
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
@@ -104,38 +105,39 @@
 							<string key="name">AmericanTypewriter-Condensed</string>
 							<string key="family">American Typewriter</string>
 							<int key="traits">0</int>
-							<double key="pointSize">109</double>
+							<double key="pointSize">180</double>
 						</object>
 						<object class="NSFont" key="IBUIFont">
 							<string key="NSName">AmericanTypewriter-CondensedLight</string>
-							<double key="NSSize">109</double>
+							<double key="NSSize">180</double>
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
 					<object class="IBUILabel" id="522814542">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{126, 622}, {768, 197}}</string>
+						<string key="NSFrame">{{128, 609}, {768, 212}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Thrash</string>
+						<string key="IBUIText">HardRock</string>
 						<reference key="IBUITextColor" ref="96748749"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
 						<float key="IBUIMinimumFontSize">10</float>
 						<int key="IBUITextAlignment">1</int>
-						<reference key="IBUIFontDescription" ref="61766758"/>
-						<reference key="IBUIFont" ref="209288206"/>
+						<reference key="IBUIFontDescription" ref="46541875"/>
+						<reference key="IBUIFont" ref="777752899"/>
 					</object>
 				</array>
 				<string key="NSFrameSize">{1024, 1024}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSNextKeyView" ref="596665911"/>
+				<reference key="NSNextKeyView" ref="961973584"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MC4zMzMzMzMzMzMzAA</bytes>

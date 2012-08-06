@@ -8,14 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
-//#ifdef RO
+#ifdef LST
 #define kOAuthConsumerKey @"O22hWB5dNKo5DI9VbPsIgg"
 #define kOAuthConsumerSecret @"RMynSqY3OFN1fsuaEf6AM977jJJNQ6HSE77A8Z4kk"
-//#endif
+#endif
 
-//#ifdef RO
+#ifdef LRH
+#define kOAuthConsumerKey @"ed3eT59xZbxTTpatdyAbfw"
+#define kOAuthConsumerSecret @"G9XAjOxBlMCohWvyfBxJ61EjnMeDLCdlppyYeCnTwMU"
+#endif
+
+#ifdef LST
 #define facebookAPI	@"262206833890576"
-//#endif
+#endif
+
+#ifdef LRH
+#define facebookAPI	@"262206833890576"
+#endif
 
 #define AdWhirlAPI @"05c424ba45264acfb6625e9d982d4973"
 

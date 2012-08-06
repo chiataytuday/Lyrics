@@ -194,4 +194,8 @@
     [self.navigationController pushViewController:info animated:YES];
 }
 
+- (IBAction)infoBand:(id)sender {
+    [self cmdInfoTouchUpInside:sender];
+}
+
 @end

@@ -29,7 +29,7 @@
         [segmentedControl setMomentary:YES];
         [segmentedControl insertSegmentWithImage:[UIImage imageNamed:@"search.png"] atIndex:0 animated:NO];
         [segmentedControl insertSegmentWithImage:[UIImage imageNamed:@"favorites.png"] atIndex:1 animated:NO];        
-        [segmentedControl insertSegmentWithImage:[UIImage imageNamed:@"info.png"] atIndex:2 animated:NO];
+        [segmentedControl insertSegmentWithImage:[UIImage imageNamed:@"settings.png"] atIndex:2 animated:NO];
         segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
         [segmentedControl addTarget:self action:@selector(segmentedAction:) forControlEvents:UIControlEventValueChanged];
         
@@ -86,6 +86,9 @@
     [popOver dismissPopoverAnimated:YES];   
     if (mainPopOver)
         [mainPopOver dismissPopoverAnimated:YES];
+    
+    segmentedControl.frame = CGRectMake(130, 5, 230, 30);
+    [segmentedControl insertSegmentWithImage:[UIImage imageNamed:@"info.png"] atIndex:3 animated:NO];
 
 }
 
@@ -115,6 +118,9 @@
         mainPopOver = [[UIPopoverController alloc] initWithContentViewController:infoController];
         mainPopOver.popoverContentSize = CGSizeMake(600, 600);
         [mainPopOver presentPopoverFromBarButtonItem:self.navigationItem.rightBarButtonItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }
+    if (segment.selectedSegmentIndex == 3) {
+        [self seeInformation:nil];
     }
 }
 
